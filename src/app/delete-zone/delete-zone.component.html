@@ -1,0 +1,27 @@
+<form [formGroup]="getForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="zoneId">Zone ID</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="zoneId" 
+            placeholder="Enter the zone ID.."
+            formControlName="zoneId"
+        >
+    </div>
+
+    <button type="submit" [disabled]="!getForm.valid">Get Details</button>
+</form>
+
+<br><br>
+
+<div *ngIf = "isValid == true">
+    <h2>Zone Name -> {{ zone.zoneName }}</h2>
+    <h2>Zone Population -> {{ zone.zonePop }}</h2>
+    <h2>Zone Color -> {{ zone.color.colorName }}</h2>
+    <br>
+    <button type="submit" (click)="onDelete()">Delete Zone</button>
+</div>
+
+
+

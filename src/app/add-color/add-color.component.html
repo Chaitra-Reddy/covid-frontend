@@ -1,0 +1,25 @@
+<form [formGroup]="colorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="colorName">Color Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="colorName" 
+            placeholder="Enter a color.."
+            formControlName="colorName"
+        >
+    </div>
+    <div class="form-group">
+        <label for="meaning">Meaning</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="meaning" 
+            placeholder="Assign a meaning to the color.."
+            formControlName="meaning"
+        >
+    </div>
+
+    <button type="submit" [disabled]="!colorForm.valid">Submit</button>
+
+</form>
