@@ -1,3 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Update Zone</li>
+    </ol>
+</nav>
+
+<br>
+<br>
+
 <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="zoneId">Zone ID</label>
@@ -31,7 +41,7 @@
         </select> 
     </div>
 
-    <button type="submit" [disabled]="!updateForm.valid">Update</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!updateForm.valid" style="background-color:rgb(71, 70, 70)">Update</button>
 
 </form>
 

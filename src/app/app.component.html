@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-light" style="background-color: #d38429;">
   <div class="navbar navbar-default">
     <ul>
       <li class="nav-item">
@@ -15,9 +15,127 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="zone/deleteZone">Delete Zone</a>
-      </li>
-    </ul>
+      </li> -->
+
+      <!-- Mega menu -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="mega" routerLink="">Mega Menu</a>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <header>Frontend</header>
+              <ul class="mega-links">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">React js</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Languages</header>
+              <ul class="mega-links">
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">C++</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Tools</header>
+              <ul class="mega-links">
+                <li><a href="#">Selenium</a></li>
+                <li><a href="#">Sonar Cube</a></li>
+                <li><a href="#">VS Code</a></li>
+                <li><a href="#">Matlab</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li> -->
+
+
+
+
+    <!-- </ul>
   </div>
-</nav>
+</nav> -->
+
+<mat-toolbar>
+
+
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <a class="nav-link" routerLink="">Home</a>
+      <a class="nav-link" routerLink="color/addColor">Add color</a>
+      <a class="nav-link" routerLink="zone/addZone">Add Zone</a>
+      <a class="nav-link" routerLink="zone/updateZone">Update Zone</a>
+      <a class="nav-link" routerLink="zone/deleteZone">Delete Zone</a>
+      <button mat-button [matMenuTriggerFor]="menu1" style="color:blue;">
+        Mega Menu
+      </button>
+      <mat-menu #menu1="matMenu" xPosition="before">
+        <div class="row">
+          <div class="col-md-2">
+            <h3>Link 1</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+          <div class="col-md-2">
+            <h3>Link 2</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+          <div class="col-md-2">
+            <h3>Link 3</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+          <div class="col-md-2">
+            <h3>Link 4</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+          <div class="col-md-2">
+            <h3>Link 5</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+          <div class="col-md-2">
+            <h3>Link 6</h3>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+            <button mat-menu-item>Item 4</button>
+            <button mat-menu-item>Item 5</button>
+
+          </div>
+
+        </div>
+
+
+      </mat-menu>
+    </mat-list-item>
+
+
+  </mat-list>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

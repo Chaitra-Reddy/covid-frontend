@@ -1,3 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Color</li>
+    </ol>
+</nav>
+
+<br>
+<br>
+
 <form [formGroup]="colorForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="colorName">Color Name</label>
@@ -20,6 +30,6 @@
         >
     </div>
 
-    <button type="submit" [disabled]="!colorForm.valid">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!colorForm.valid" style="background-color:rgb(71, 70, 70)">Submit</button>
 
 </form>

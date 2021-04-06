@@ -11,7 +11,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(51, 51, 54);
     text-align: center;
     padding: 16px;
     text-decoration: none;
@@ -19,4 +19,69 @@ li a {
 
 li a:hover {
     background-color: #111111;
+    color: white;
+}
+
+//mega menu styling
+
+.nav-item {
+    #mega {
+        &:hover {
+			.mega-box {
+				top: 70px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+    }
+}
+.mega-box {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 0 30px;
+	top: 85px;
+	opacity: 0;
+	visibility: hidden;
+	.content {
+		background: #242526;
+		padding: 25px 20px;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+		.row {
+			line-height: 45px;
+		}
+	}
+}
+.content {
+	.row {
+		header {
+			color: #131212;
+			font-size: 20px;
+			font-weight: 500;
+		}
+		.mega-links {
+			margin-left: -40px;
+			border-left: 1px solid rgba(255,255,255,0.09);
+		}
+	}
+}
+.row {
+	.mega-links {
+		li {
+			padding: 0 20px;
+			a {
+				padding: 0px;
+				padding: 0 20px;
+				color: #0a0a0a;
+				font-size: 17px;
+				display: block;
+				&:hover {
+					color: #f2f2f2;
+				}
+			}
+		}
+	}
 }

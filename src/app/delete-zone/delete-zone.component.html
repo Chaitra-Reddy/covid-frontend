@@ -1,3 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Delete Zone</li>
+    </ol>
+</nav>
+
+<br>
+<br>
+
 <form [formGroup]="getForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="zoneId">Zone ID</label>
@@ -10,7 +20,7 @@
         >
     </div>
 
-    <button type="submit" [disabled]="!getForm.valid">Get Details</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!getForm.valid" style="background-color:rgb(71, 70, 70)">Get Details</button>
 </form>
 
 <br><br>
@@ -20,7 +30,7 @@
     <h2>Zone Population -> {{ zone.zonePop }}</h2>
     <h2>Zone Color -> {{ zone.color.colorName }}</h2>
     <br>
-    <button type="submit" (click)="onDelete()">Delete Zone</button>
+    <button class="btn btn-primary" type="submit" (click)="onDelete()" style="background-color:rgb(71, 70, 70)">Delete Zone</button>
 </div>
 
 

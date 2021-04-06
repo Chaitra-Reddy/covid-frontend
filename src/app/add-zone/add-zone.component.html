@@ -1,24 +1,24 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add zone</li>
+    </ol>
+</nav>
+
+<br>
+<br>
+
 <form [formGroup]="zoneForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="zoneName">Zone Name</label>
-        <input 
-            type="text" 
-            class="form-control" 
-            id="zoneName" 
-            placeholder="Enter a city name.."
-            formControlName="zoneName"
-        >
+        <input type="text" class="form-control" id="zoneName" placeholder="Enter a city name.."
+            formControlName="zoneName">
     </div>
-    
+
     <div class="form-group">
         <label for="zonePop">Zone's Population</label>
-        <input 
-            type="number" 
-            class="form-control" 
-            id="zonePop" 
-            placeholder="Enter the zone's population.."
-            formControlName="zonePop"
-        >
+        <input type="number" class="form-control" id="zonePop" placeholder="Enter the zone's population.."
+            formControlName="zonePop">
     </div>
 
     <div class="form-group">
@@ -28,9 +28,10 @@
             <option *ngFor="let color of colors" [ngValue]="color">
                 {{ color.colorName }}
             </option>
-        </select> 
+        </select>
     </div>
 
-    <button type="submit" [disabled]="!zoneForm.valid">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!zoneForm.valid"
+        style="background-color:rgb(71, 70, 70)">Submit</button>
 
 </form>

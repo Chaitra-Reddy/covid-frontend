@@ -1,3 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import 'bootstrap/dist/css/bootstrap.css';
+
+$white:#fff;
+
+* {
+  font-family: "Nunito Sans";
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.mat-list-base {
+  padding-top: 0px !important;
+}
+
+.mat-icon,
+button,
+h3 {
+  color: $white !important;
+}
+
+.mat-list-base,
+.row {
+  display: flex !important;
+}
+
+.mat-toolbar {
+  background-color: #2d3436 !important;
+
+}
+
+.mat-menu-panel {
+  max-width: none !important;
+}
+
+
+.row {
+  margin: 0px !important;
+}
+
+.cdk-overlay-pane {
+  width: 100%;
+}
+
+.mat-menu-panel {
+  width: 100%;
+  box-shadow: none !important;
+  background-color: #636e72 !important;
+  transform: none !important;
+  border-radius: 4px !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+h3 {
+  padding-top: 15px;
+}
+
+.cdk-overlay-pane {
+  top: 64px !important;
+}
+
+button.mat-menu-item {
+  font-size: 18px !important;
+}
+
+@media(max-width:768px) {
+  .cdk-overlay-pane {
+    top: 55px !important;
+  }
+
+  button.mat-menu-item,
+  h3 {
+    text-align: center !important;
+  }
+
+}
+
